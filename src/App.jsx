@@ -7,6 +7,7 @@ import EventDetailPage from "./Pages/EventDetailPage";
 import NewEventPage from "./Pages/NewEventPage";
 import EditEventPage from "./Pages/EditEventPage";
 import MainEventLayout from "./Routes/MainEventLayout";
+import { eventLoader } from "./Pages/EventPage";
 
 const router = createBrowserRouter([
   {
@@ -24,17 +25,7 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <EventPage />,
-            loader: async () => {
-              const response = await fetch("http://localhost:8080/events");
-
-              if (!response.ok) {
-                //
-              } else {
-                const resData = await response.json();
-                console.log("data =>", resData);
-                return resData.events;
-              }
-            },
+            loader: eventLoader,
           },
           { path: ":eventId", element: <EventDetailPage /> },
           {
