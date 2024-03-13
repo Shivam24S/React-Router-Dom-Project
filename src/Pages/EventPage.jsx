@@ -26,7 +26,7 @@ export default EventPage;
 
 // this is browser code it will run client side you can use anything but you cant use react hook inside
 export async function eventLoader() {
-  const response = await fetch("http://localhost:8080/eventsabcd");
+  const response = await fetch("http://localhost:8080/eventscc");
 
   if (!response.ok) {
     // i can  handle error like this
@@ -37,7 +37,7 @@ export async function eventLoader() {
     //   status: 500,
     // });
     // another good way approach provided by react-router-dom
-    return json({ message: "failed to fetch Data" }, { status: 500 });
+    throw json({ message: "failed to fetch Data" }, { status: 500 });
   } else {
     // const resData = await response.json();
     // return resData.events;
