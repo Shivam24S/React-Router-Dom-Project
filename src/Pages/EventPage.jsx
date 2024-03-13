@@ -26,7 +26,7 @@ export default EventPage;
 
 // this is browser code it will run client side you can use anything but you cant use react hook inside
 export async function eventLoader() {
-  const response = await fetch("http://localhost:8080/eventscc");
+  const response = await fetch("http://localhost:8080/events");
 
   if (!response.ok) {
     // i can  handle error like this
