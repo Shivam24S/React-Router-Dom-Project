@@ -23,6 +23,9 @@ export async function NewEventDataSender({ request }) {
     body: JSON.stringify(allData),
   });
 
+  if (response.status === 422) {
+    return response;
+  }
   if (!response.ok) {
     throw json({ message: "can't able to save event Data" }, { status: 500 });
   }
