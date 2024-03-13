@@ -26,5 +26,5 @@ export async function NewEventDataSender({ request }) {
   if (!response.ok) {
     throw json({ message: "can't able to save event Data" }, { status: 500 });
   }
-  return redirect("/");
+  return redirect("/events");
 }
