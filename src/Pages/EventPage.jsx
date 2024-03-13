@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, json } from "react-router-dom";
 
 import EventsList from "../components/EventsList";
 
@@ -32,10 +32,12 @@ export async function eventLoader() {
     // i can  handle error like this
     // return { isError: true, message: "can't able fetch Data" };
     // or error element can also be shown if not in that element it can show parent error elements
-    throw new Response(JSON.stringify({ message: "failed to fetch Data" }), {
-      status: 500,
-    });
-    //
+    // another approach
+    // throw new Response(JSON.stringify({ message: "failed to fetch Data" }), {
+    //   status: 500,
+    // });
+    // another good way approach provided by react-router-dom
+    return json({ message: "failed to fetch Data" }, { status: 500 });
   } else {
     // const resData = await response.json();
     // return resData.events;
