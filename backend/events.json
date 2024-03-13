@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"extra class","image":"https://www.pexels.com/photo/html-code-270366/","date":"2024-03-24","description":"extra class schedule for this sunday","id":"427786a9-0075-4249-a67b-fce4a45e8228"},{"title":"WaterFall Visit","image":"https://images.pexels.com/photos/16458593/pexels-photo-16458593/free-photo-of-a-man-standing-in-a-park.jpeg?auto=compress&cs=tinysrgb&w=400","date":"2024-03-24","description":"A trip arranged","id":"1505ef75-3ea8-4b5a-86b0-ccda4606f2a4"},{"title":"jaipur","image":"https://images.pexels.com/photos/2408858/pexels-photo-2408858.jpeg?auto=compress&cs=tinysrgb&w=600","date":"2024-03-15","description":"party arranged","id":"90237a72-caff-4027-8a7c-5456b272ba1c"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}

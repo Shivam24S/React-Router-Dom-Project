@@ -1,8 +1,12 @@
-import { json, useLoaderData } from "react-router-dom";
+import { json, useRouteLoaderData } from "react-router-dom";
 import EventItem from "../components/EventItem";
 
 const EventDetailPage = () => {
-  const data = useLoaderData();
+  // const data = useLoaderData();
+
+  // now we are sharing loader data in two element to use the data react -route provide
+  // another hook useRouteLoaderData to load data using id we have to add id in our browser route
+  const data = useRouteLoaderData("event-details");
 
   return (
     <div>
