@@ -32,6 +32,9 @@ export async function eventLoader() {
     // i can  handle error like this
     // return { isError: true, message: "can't able fetch Data" };
     // or error element can also be shown if not in that element it can show parent error elements
+    throw new Response(JSON.stringify({ message: "failed to fetch Data" }), {
+      status: 500,
+    });
     //
   } else {
     // const resData = await response.json();
