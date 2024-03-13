@@ -7,11 +7,12 @@ import EventDetailPage, {
   DeleteEvent,
   EventDetailPageLoader,
 } from "./Pages/EventDetailPage";
-import NewEventPage, { NewEventDataSender } from "./Pages/NewEventPage";
+import NewEventPage from "./Pages/NewEventPage";
 import EditEventPage from "./Pages/EditEventPage";
 import MainEventLayout from "./Routes/MainEventLayout";
 import { eventLoader } from "./Pages/EventPage";
 import ErrorPage from "./Pages/ErrorPage";
+import { FormDataSenderAndUpdater } from "./components/EventForm";
 
 const router = createBrowserRouter([
   {
@@ -46,13 +47,14 @@ const router = createBrowserRouter([
               {
                 path: "edit",
                 element: <EditEventPage />,
+                action: FormDataSenderAndUpdater,
               },
             ],
           },
           {
             path: "new",
             element: <NewEventPage />,
-            action: NewEventDataSender,
+            action: FormDataSenderAndUpdater,
           },
         ],
       },
